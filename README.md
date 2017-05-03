@@ -1,7 +1,9 @@
 # This repo 
 - is for playing angular in different projs.
 
+
 ## quickstart-cli
+- update to latest by `npm install -g @angular/cli`
 - created by `ng new my-app`, to verify the setup.
 
 ## tour-of-heroes
