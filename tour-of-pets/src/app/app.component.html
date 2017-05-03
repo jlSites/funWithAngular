@@ -1,0 +1,23 @@
+<h1>
+  Tour of Pets
+</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>WEIGHT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let pet of pets' (click)='selectPet(pet)'>
+      <td>{{pet.id}}</td>
+      <td>{{pet.name}}</td>
+      <td>{{pet.weight}}</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<pet-detail [pet]='selectedPet'></pet-detail>

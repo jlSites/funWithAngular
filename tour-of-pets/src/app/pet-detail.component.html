@@ -1,0 +1,12 @@
+<div *ngIf='pet'>
+    <h2>Pet Details</h2>
+    <div>Id
+        <input [(ngModel)]='pet.id' type="number" />
+    </div>
+    <div>Name
+        <input [(ngModel)]='pet.name' placeholder="name me" type="text" />
+    </div>
+    <div>Weight
+        <input [(ngModel)]='pet.weight' type="number" step="0.01" />
+    </div>
+</div>
