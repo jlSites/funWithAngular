@@ -26,4 +26,12 @@ export class PetDetailComponent implements OnInit {
     goBack(): void {
         this.location.back();
     }
+
+    onSubmit(): void {
+        console.debug(">>>onSubmit=", this.pet);
+        this.petService.postPet(this.pet)
+            .subscribe(
+            pet => this.goBack());
+
+    }
 }

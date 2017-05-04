@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Pet } from "./pet";
-import { Http, Response } from "@angular/http";
+import { Http, Response, Headers, RequestOptions } from "@angular/http";
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -22,7 +22,7 @@ export class PetService {
         console.log(">>>res=", res);
         console.log(">>>body=", body);
         console.log(">>>body.data=", body.data);
-        return body.data || {};
+        return body || {};
     }
 
     private handleError(error: Response | any) {
@@ -39,8 +39,19 @@ export class PetService {
     }
 
     getPet(name: string): Observable<Pet> {
-        return this.getPets()
-            .map(retPets => retPets.find(findingPet => findingPet.name === name));
+        const url = `${this.petUrl}/${name}`;
+        return this.http.get(url)
+            .map(this.extractData)
+            .catch(this.handleError);
+    }
+
+    postPet(pet: Pet): Observable<Pet> {
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let options = new RequestOptions({ headers: headers });
+
+        return this.http.post(this.petUrl, pet, options)
+            .map(this.extractData)
+            .catch(this.handleError);
     }
 }
 

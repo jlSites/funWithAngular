@@ -1,5 +1,3 @@
 export class Pet {
-    name: string;
-    age: number;
-    weight: number;
+    constructor(public name: string, public age: number, public weight: number) { }
 }
