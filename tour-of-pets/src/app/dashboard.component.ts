@@ -19,7 +19,8 @@ export class DashboardComponent implements OnInit {
     }
 
     getPets(): void {
-        this.petService.getPets().then(retPets => this.pets = retPets.slice(1, 5));
+        //this.petService.getPets().subscribe(retPets => this.pets = retPets.slice(1, 5));
+        this.petService.getPets().subscribe(retPets => this.pets = retPets);
     }
 
     selectPet(selectedPet: Pet) {

@@ -20,14 +20,14 @@ export class PetsComponent implements OnInit {
     }
 
     getPets(): void {
-        this.petService.getPets().then(retPets => this.pets = retPets);
+        this.petService.getPets().subscribe(retPets => this.pets = retPets);
     }
 
     onSelect(pet: Pet) {
         this.selectedPet = pet;
     }
 
-    gotoDetail(): void{
+    gotoDetail(): void {
         this.router.navigate(['/detail', this.selectedPet.name]);
     }
 }

@@ -1,21 +1,46 @@
 import { Injectable } from '@angular/core';
 import { Pet } from "./pet";
+import { Http, Response } from "@angular/http";
+
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class PetService {
-    getPets(): Promise<Pet[]> {
-        return Promise.resolve(MOCK_PETS);
+    private petUrl = 'http://localhost:1338/pet'; // url to web API
+
+    constructor(private http: Http) { }
+
+    getPets(): Observable<Pet[]> {
+        return this.http.get(this.petUrl)
+            .map(this.extractData)
+            .catch(this.handleError);
+    }
+    private extractData(res: Response) {
+        let body = res.json();
+        console.log(">>>res=", res);
+        console.log(">>>body=", body);
+        console.log(">>>body.data=", body.data);
+        return body.data || {};
     }
 
-    getPetsSlowly(): Promise<Pet[]> {
-        return new Promise(resolve => {
-            setTimeout(() => resolve(this.getPets()), 2000);
-        });
+    private handleError(error: Response | any) {
+        let errMsg: string;
+        if (error instanceof Response) {
+            const body = error.json() || '';
+            const err = body.error || JSON.stringify(body);
+            errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
+        } else {
+            errMsg = error.message ? error.message : error.toString();
+        }
+        console.error(errMsg);
+        return Observable.throw(errMsg);
     }
 
-    getPet(name: string): Promise<Pet> {
+    getPet(name: string): Observable<Pet> {
         return this.getPets()
-            .then(retPets => retPets.find(findingPet => findingPet.name === name));
+            .map(retPets => retPets.find(findingPet => findingPet.name === name));
     }
 }
 
