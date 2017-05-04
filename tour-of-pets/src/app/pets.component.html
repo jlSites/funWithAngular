@@ -1,0 +1,25 @@
+<div class="table-responsive pets">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>WEIGHT</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pet of pets" (click)="onSelect(pet)" [class.active]="selectedPet===pet">
+                <td>{{pet.name}}</td>
+                <td>{{pet.age}}</td>
+                <td>{{pet.weight}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="selectedPet">
+  <h3>
+    {{selectedPet.name | uppercase}} is my pet
+  </h3>
+  <button (click)="gotoDetail()">View Details</button>
+</div>

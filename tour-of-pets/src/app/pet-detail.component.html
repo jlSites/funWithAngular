@@ -1,12 +1,22 @@
-<div *ngIf='pet'>
-    <h2>Pet Details</h2>
-    <div>Id
-        <input [(ngModel)]='pet.id' type="number" />
-    </div>
-    <div>Name
-        <input [(ngModel)]='pet.name' placeholder="name me" type="text" />
-    </div>
-    <div>Weight
-        <input [(ngModel)]='pet.weight' type="number" step="0.01" />
-    </div>
+<div *ngIf="pet">
+    <h3>Pet Details</h3>
+
+    <form>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="pet.name" placeholder="name me">
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" class="form-control" id="age" name="age" [(ngModel)]="pet.age">
+        </div>
+        <div class="form-group">
+            <label for="weight">Weight:</label>
+            <input type="number" step="0.01" class="form-control" id="weight" name="weight" [(ngModel)]="pet.weight">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+        </div>
+        <button class="btn btn-default" (click)="goBack()">Back</button>
+    </form>
 </div>

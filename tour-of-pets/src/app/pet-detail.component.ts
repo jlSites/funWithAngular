@@ -1,4 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Location } from '@angular/common';
+
+import 'rxjs/add/operator/switchMap';
+
+import { PetService } from "./pet.service";
 import { Pet } from "./pet";
 
 @Component({
@@ -7,9 +13,17 @@ import { Pet } from "./pet";
 })
 
 export class PetDetailComponent implements OnInit {
-    @Input() pet: Pet;
+    pet: Pet;
 
-    constructor() { }
+    constructor(private petService: PetService, private route: ActivatedRoute, private location: Location) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.route.params
+            .switchMap((params: Params) => this.petService.getPet(params['name']))
+            .subscribe(retPet => this.pet = retPet);
+    }
+
+    goBack(): void {
+        this.location.back();
+    }
 }
