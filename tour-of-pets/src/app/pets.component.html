@@ -18,8 +18,8 @@
 </div>
 
 <div *ngIf="selectedPet">
-  <h3>
-    {{selectedPet.name | uppercase}} is my pet
-  </h3>
-  <button (click)="gotoDetail()">View Details</button>
+    <h3>
+        {{selectedPet.name | uppercase}} is my pet
+    </h3>
+    <button type="button" class="btn btn-default" (click)="gotoDetail()">View Details</button>
 </div>

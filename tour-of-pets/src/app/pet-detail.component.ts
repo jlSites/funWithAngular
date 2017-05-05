@@ -14,6 +14,7 @@ import { Pet } from "./pet";
 
 export class PetDetailComponent implements OnInit {
     pet: Pet;
+    errorMessage: string;
 
     constructor(private petService: PetService, private route: ActivatedRoute, private location: Location) { }
 
@@ -31,7 +32,15 @@ export class PetDetailComponent implements OnInit {
         console.debug(">>>onSubmit=", this.pet);
         this.petService.postPet(this.pet)
             .subscribe(
-            pet => this.goBack());
+            pet => this.goBack(),
+            error => this.errorMessage = <any>error);
+    }
 
+    onDelete(): void {
+        console.debug(">>>onDelete=", this.pet);
+        this.petService.deletePet(this.pet.name)
+            .subscribe(
+            pet => this.goBack(),
+            error => this.errorMessage = <any>error);
     }
 }

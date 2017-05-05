@@ -18,6 +18,8 @@
             <label><input type="checkbox"> Remember me</label>
         </div>
         <button type="submit" class="btn btn-success" [disabled]="!petForm.form.valid">Submit</button>
+        <button type="button" class="btn btn-default" (click)="onDelete()">Delete</button>
         <button type="button" class="btn btn-default" (click)="goBack()">Back</button>
     </form>
+    <p class="error" *ngIf="errorMessage">{{errorMessage}}</p>
 </div>

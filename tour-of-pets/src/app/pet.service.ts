@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Pet } from "./pet";
-import { Http, Response, Headers, RequestOptions } from "@angular/http";
+import { Http, Response } from "@angular/http";
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -12,11 +12,36 @@ export class PetService {
 
     constructor(private http: Http) { }
 
+    // get all pets by GET
     getPets(): Observable<Pet[]> {
         return this.http.get(this.petUrl)
             .map(this.extractData)
             .catch(this.handleError);
     }
+
+    // get a pet by name by GET
+    getPet(name: string): Observable<Pet> {
+        const url = `${this.petUrl}/${name}`;
+        return this.http.get(url)
+            .map(this.extractData)
+            .catch(this.handleError);
+    }
+
+    // post a pet by POST
+    postPet(pet: Pet): Observable<Pet> {
+        return this.http.post(this.petUrl, pet)
+            .map(this.extractData)
+            .catch(this.handleError);
+    }
+
+    // delete a pet by name by GET
+    deletePet(name: string): Observable<Pet> {
+        const url = `${this.petUrl}/${name}`;
+        return this.http.delete(url)
+            .map(this.extractData)
+            .catch(this.handleError);
+    }
+
     private extractData(res: Response) {
         let body = res.json();
         console.log(">>>res=", res);
@@ -36,22 +61,6 @@ export class PetService {
         }
         console.error(errMsg);
         return Observable.throw(errMsg);
-    }
-
-    getPet(name: string): Observable<Pet> {
-        const url = `${this.petUrl}/${name}`;
-        return this.http.get(url)
-            .map(this.extractData)
-            .catch(this.handleError);
-    }
-
-    postPet(pet: Pet): Observable<Pet> {
-        let headers = new Headers({ 'Content-Type': 'application/json' });
-        let options = new RequestOptions({ headers: headers });
-
-        return this.http.post(this.petUrl, pet, options)
-            .map(this.extractData)
-            .catch(this.handleError);
     }
 }
 

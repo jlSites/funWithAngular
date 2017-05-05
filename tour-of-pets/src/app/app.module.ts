@@ -11,6 +11,8 @@ import { DashboardComponent } from "./dashboard.component";
 import { PetService } from "./pet.service";
 import { AppRoutingModule } from './app-routing.module';
 
+import { requestOptionsProvider } from './default-request-options.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,7 @@ import { AppRoutingModule } from './app-routing.module';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [PetService],
+  providers: [PetService, requestOptionsProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
