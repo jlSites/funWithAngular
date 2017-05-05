@@ -3,8 +3,13 @@
 
     <form (ngSubmit)="onSubmit()" #petForm="ngForm">
         <div class="form-group">
+            <!--
             <label for="name">Name:</label>
             <input type="text" class="form-control" id="name" placeholder="name me" required [(ngModel)]="pet.name" name="name">
+            -->
+            <md-input-container>
+                <input mdInput class="form-control" id="name" placeholder="Name" required [(ngModel)]="pet.name" name="name">
+            </md-input-container>
         </div>
         <div class="form-group">
             <label for="age">Age:</label>
