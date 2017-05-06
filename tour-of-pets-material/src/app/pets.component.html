@@ -1,25 +1,18 @@
-<div class="table-responsive pets">
-    <table class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>NAME</th>
-                <th>AGE</th>
-                <th>WEIGHT</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let pet of pets" (click)="onSelect(pet)" [class.active]="selectedPet===pet">
-                <td>{{pet.name}}</td>
-                <td>{{pet.age}}</td>
-                <td>{{pet.weight}}</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<md-list>
+    <h2 md-subheader>All pets are here</h2>
+    <md-list-item *ngFor="let pet of pets" (click)="onSelect(pet)" [class.active]="selectedPet===pet">
+        <md-icon md-list-icon>pets</md-icon>
+        <h3 md-line>{{pet.name}}</h3>
+        <p md-line>Age:{{pet.age}} Weight:{{pet.weight}}</p>
+    </md-list-item>
+    <md-divider></md-divider>
+</md-list>
 
+<!--
 <div *ngIf="selectedPet">
     <h3>
         {{selectedPet.name | uppercase}} is my pet
     </h3>
     <button type="button" class="btn btn-default" (click)="gotoDetail()">View Details</button>
 </div>
+    -->

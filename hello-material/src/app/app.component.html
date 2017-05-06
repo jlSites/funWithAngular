@@ -1,0 +1,41 @@
+<md-sidenav-container [class.m2app-dark]="isDarkTheme">
+
+    <md-sidenav #sidenav mode="side" class="app-sidenav">
+        <md-list>
+            <h3 md-subheader>Todo List</h3>
+            <md-list-item>
+                <md-icon md-list-avatar>pets</md-icon>
+                <h4 md-line>Go Shopping</h4>
+                <p md-line>We are hungry</p>
+            </md-list-item>
+        </md-list>
+    </md-sidenav>
+
+    <md-toolbar color="primary">
+        <button class="app-icon-button" (click)="sidenav.toggle()">
+        <i class="material-icons app-toolbar-menu">menu</i>
+        </button>
+        <span>Hello Material</span>
+        <span class="app-toolbar-filler"></span>
+        <!--
+        <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
+            -->
+        <ul  >
+            <li><a href="#"><i class="material-icons app-toolbar-menu">menu</i> Sign Up</a></li>
+            <li><a href="#"><i class="material-icons app-toolbar-menu">menu</i> Login</a></li>
+        </ul>
+    </md-toolbar>
+
+    <div class="app-content">
+
+        <md-card>
+            <button md-button>FLAT</button>
+            <button md-raised-button md-tooltip="This is a tooltip!">RAISED</button>
+            <button md-raised-button color="primary">PRIMARY RAISED</button>
+            <button md-raised-button color="accent">ACCENT RAISED</button>
+        </md-card>
+        <demo-list></demo-list>
+        <md-card>
+        </md-card>
+    </div>
+</md-sidenav-container>
