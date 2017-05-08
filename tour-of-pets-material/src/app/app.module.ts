@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from '@angular/material';
+
 
 import { AppComponent } from './app.component';
 import { PetDetailComponent } from "./pet-detail.component";
@@ -12,6 +12,7 @@ import { PetsComponent } from "./pets.component";
 import { DashboardComponent } from "./dashboard.component";
 import { PetService } from "./pet.service";
 import { AppRoutingModule } from './app-routing.module';
+import { MyMaterialModule } from './my-material.module';
 
 import { requestOptionsProvider } from './default-request-options.service';
 
@@ -30,8 +31,8 @@ import 'hammerjs';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    MaterialModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MyMaterialModule
   ],
   providers: [PetService, requestOptionsProvider],
   bootstrap: [AppComponent]

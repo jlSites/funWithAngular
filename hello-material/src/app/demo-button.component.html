@@ -1,0 +1,44 @@
+<h2>Demo with Buttons</h2>
+
+<h3>Normal Buttons</h3>
+<div class="button-row" *ngFor="let disabledOrNot of disabledSettings">
+    <button md-button [disabled]="disabledOrNot">Flat button</button>
+    <button md-raised-button md-tooltip="This is a tooltip!" [disabled]="disabledOrNot">Raised button with tip</button>
+    <button md-raised-button color="primary" [disabled]="disabledOrNot">Primary raised</button>
+    <button md-raised-button color="accent" [disabled]="disabledOrNot">Accent raised</button>
+    <button md-raised-button color="warn" [disabled]="disabledOrNot">Warn raised</button>
+    <button md-icon-button [disabled]="disabledOrNot">
+        <md-icon>home</md-icon>
+    </button>
+    <button md-fab [disabled]="disabledOrNot"><md-icon>check</md-icon></button>
+    <button md-mini-fab [disabled]="disabledOrNot"><md-icon>check</md-icon></button>
+</div>
+
+<h3>Link Buttons</h3>
+<div class="example-button-row" *ngFor="let disabledOrNot of disabledSettings">
+    <a md-button routerLink="." [disabled]="disabledOrNot">Flat button</a>
+    <a md-raised-button routerLink="." [disabled]="disabledOrNot">Raised button</a>
+    <a md-fab routerLink="." [disabled]="disabledOrNot">
+        <md-icon>check</md-icon>
+    </a>
+    <a md-mini-fab routerLink="." [disabled]="disabledOrNot">
+        <md-icon>check</md-icon>
+    </a>
+</div>
+
+<h3>Toggle Buttons</h3>
+<md-button-toggle-group #group="mdButtonToggleGroup">
+    <md-button-toggle value="left">
+        <md-icon>format_align_left</md-icon>
+    </md-button-toggle>
+    <md-button-toggle value="center">
+        <md-icon>format_align_center</md-icon>
+    </md-button-toggle>
+    <md-button-toggle value="right">
+        <md-icon>format_align_right</md-icon>
+    </md-button-toggle>
+    <md-button-toggle value="justify" disabled>
+        <md-icon>format_align_justify</md-icon>
+    </md-button-toggle>
+</md-button-toggle-group>
+<div class="example-selected-value">Selected value: {{group.value}}</div>
