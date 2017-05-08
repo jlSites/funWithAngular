@@ -1,0 +1,8 @@
+.demo-card {
+  width: 300px;
+}
+
+.demo-header-image {
+  background-image: url('../assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
