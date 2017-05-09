@@ -1,29 +1,40 @@
 <md-sidenav-container [class.m2app-dark]="isDarkTheme">
 
-    <md-sidenav #sidenav mode="side" class="app-sidenav">
+    <md-sidenav #sidenav mode="side" opened="true" class="app-sidenav">
         <md-list>
-            <h3 md-subheader>Todo List</h3>
+            <h2 md-subheader>Shopping List</h2>
             <md-list-item>
-                <md-icon md-list-avatar>pets</md-icon>
-                <h4 md-line>Go Shopping</h4>
-                <p md-line>We are hungry</p>
+                <md-icon md-list-avatar color="warn">check</md-icon>
+                <h4 md-line>Tomato</h4>
+                <p md-line>2 kilo</p>
+            </md-list-item>
+            <md-list-item>
+                <md-icon md-list-avatar>check</md-icon>
+                <h4 md-line>Green Prawn</h4>
+                <p md-line>1.5 kilo</p>
             </md-list-item>
         </md-list>
     </md-sidenav>
 
-    <md-toolbar color="primary">
+    <md-toolbar color="accent">
         <button class="app-icon-button" (click)="sidenav.toggle()">
-        <i class="material-icons app-toolbar-menu">menu</i>
+            <i class="material-icons app-toolbar-menu">menu</i>
         </button>
         <span>Hello Material</span>
+
+        <!-- This fills the remaining space of the current row -->
         <span class="app-toolbar-filler"></span>
         <!--
         <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
             -->
-        <ul>
-            <li><a href="#"><i class="material-icons app-toolbar-menu">menu</i> Sign Up</a></li>
-            <li><a href="#"><i class="material-icons app-toolbar-menu">menu</i> Login</a></li>
-        </ul>
+        <button md-button>
+            <md-icon>perm_identity</md-icon>
+            <span>Sign Up</span>
+        </button>
+        <button md-button>
+            <md-icon>input</md-icon>
+            <span>Login</span>
+        </button>
     </md-toolbar>
 
     <div class="app-content">
@@ -65,6 +76,11 @@
         <!-- demo for menu -->
         <md-card>
             <demo-menu></demo-menu>
+        </md-card>
+
+        <!-- demo for form control on checkbox -->
+        <md-card>
+            <demo-form-control-checkbox></demo-form-control-checkbox>
         </md-card>
     </div>
 </md-sidenav-container>

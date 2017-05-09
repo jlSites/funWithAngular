@@ -1,0 +1,33 @@
+<h2>Demo with Form Controls on Checkbox</h2>
+<h3>some configs</h3>
+
+<div>
+    <md-checkbox [(ngModel)]='checked'>Checked</md-checkbox>
+    <md-checkbox [(ngModel)]='indeterminate'>Indeterminate</md-checkbox>
+</div>
+
+<div>
+    <label>Align: </label>
+    <md-radio-group [(ngModel)]='align'>
+        <md-radio-button value="start">Start</md-radio-button>
+        <md-radio-button value="end">End</md-radio-button>
+    </md-radio-group>
+</div>
+
+<div>
+    <md-checkbox [(ngModel)]='disabled'>Disabled</md-checkbox>
+</div>
+
+<div>
+    <label>Color: </label>
+    <md-radio-group [(ngModel)]='color'>
+        <md-radio-button value="accent">default is 'accent'</md-radio-button>
+        <md-radio-button value="primary">primary</md-radio-button>
+        <md-radio-button value="warn">warn</md-radio-button>
+    </md-radio-group>
+</div>
+
+<div>
+    <h3>result is</h3>
+    <md-checkbox [checked]='checked' [indeterminate]='indeterminate' [align]='align' [disabled]='disabled' [color]='color'>Checkme by Config</md-checkbox>
+</div>

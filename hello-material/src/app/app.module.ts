@@ -18,6 +18,7 @@ import { DemoCardComponent } from './demo-card.component';
 import { DemoTabsComponent, DemoTabNavOneComponent, DemoTabNavTwoComponent } from './demo-tabs.component';
 import { DemoTabsRoutingModule } from './demo-tabs-routing.module';
 import { DemoMenuComponent } from "./demo-menu.component";
+import { DemoFormControlCheckboxComponent } from './demo-form-control-checkbox.component';
 
 // this is must for angular material
 import 'hammerjs';
@@ -35,7 +36,8 @@ import 'hammerjs';
     DemoTabsComponent,
     DemoTabNavOneComponent,
     DemoTabNavTwoComponent,
-    DemoMenuComponent
+    DemoMenuComponent,
+    DemoFormControlCheckboxComponent
   ],
   entryComponents: [
     // this is must for dialog component
