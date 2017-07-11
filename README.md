@@ -4,7 +4,9 @@
 
 ## hello-cli
 - update to latest by `npm install -g @angular/cli`
-- created by `ng new my-app`, to verify the setup.
+- created by `ng new hello-cli`, to verify the setup
+- `cd hello-cli`
+- `ng serve -o`
 
 ## tour-of-heroes
 - the official tutorial made step by step by me.
