@@ -2,7 +2,7 @@
 - is for playing angular in different projs.
 
 
-## quickstart-cli
+## hello-cli
 - update to latest by `npm install -g @angular/cli`
 - created by `ng new my-app`, to verify the setup.
 
@@ -20,18 +20,7 @@
 
 
 # How to keep demo projs sync with quickstart-seed?
-1) clone a new proj from seed to make sure get the latest one
-  - `git clone https://github.com/angular/quickstart.git my-new-proj`
-
-2) `cd my-new-proj`
-
-3) `rm -rf .git`
-
-4) compare src/ folder and copy when necessary, especially some manually changed files, like `index.html`, `*.css`.
-
-5) for npm packages, run `npm install` or move `node_modules/` from another existed proj
-
-6) `npm start`
+- deprecated as go with Angular CLI
 
 
 # How to keep demo projs sync with Angular CLI?
