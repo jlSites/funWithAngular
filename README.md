@@ -34,10 +34,13 @@
 6) `npm start`
 
 
-# How to keep demo projs sync with quickstart cli?
-1) create a new proj with cli
+# How to keep demo projs sync with Angular CLI?
+1) install angular CLI globally
+  - `npm install -g @angular/cli`
+
+2) create a new proj with cli
   - `ng new my-app`
 
-2) compare two projs
+3) compare two projs
 
-3) `ng serve`
+4) `ng serve`
