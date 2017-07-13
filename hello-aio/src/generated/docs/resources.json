@@ -1,0 +1,5 @@
+{
+  "id": "resources",
+  "title": "Explore Angular Resources",
+  "contents": "\n<div class=\"content\">\n<header class=\"marketing-banner\">\n  <h1 class=\"banner-headline no-toc no-anchor\" id=\"explore-angular-resources\"><a title=\"Link to this heading\" class=\"header-link\" aria-hidden=\"true\" href=\"resources#explore-angular-resources\"><i class=\"material-icons\">link</i></a>Explore Angular Resources</h1>\n</header>\n<article>\n  <aio-resource-list></aio-resource-list>\n</article>\n\n</div>"
+}

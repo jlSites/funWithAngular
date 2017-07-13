@@ -1,0 +1,5 @@
+{
+  "id": "api/upgrade/static",
+  "title": "static",
+  "contents": "<article>\n  <header class=\"api-header\">\n    <h1 class=\"no-toc\" id=\"static\"><a title=\"Link to this heading\" class=\"header-link\" aria-hidden=\"true\" href=\"api/upgrade/static#static\"><i class=\"material-icons\">link</i></a>static</h1>\n    <label class=\"api-type-label module\">module</label>\n    \n    \n    \n    <span class=\"version\"></span>\n  </header>\n\n  \n\n\n<section class=\"export-list\">\n  <ul>\n    <li><a href=\"api/upgrade/static/getAngularLib\">getAngularLib</a></li><li><a href=\"api/upgrade/static/setAngularLib\">setAngularLib</a></li><li><a href=\"api/upgrade/static/downgradeComponent\">downgradeComponent</a></li><li><a href=\"api/upgrade/static/downgradeInjectable\">downgradeInjectable</a></li><li><a href=\"api/upgrade/static/UpgradeComponent\">UpgradeComponent</a></li><li><a href=\"api/upgrade/static/UpgradeModule\">UpgradeModule</a></li>\n  </ul>\n</section>\n\n</article>"
+}

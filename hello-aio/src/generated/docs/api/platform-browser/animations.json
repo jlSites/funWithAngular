@@ -1,0 +1,5 @@
+{
+  "id": "api/platform-browser/animations",
+  "title": "animations",
+  "contents": "<article>\n  <header class=\"api-header\">\n    <h1 class=\"no-toc\" id=\"animations\"><a title=\"Link to this heading\" class=\"header-link\" aria-hidden=\"true\" href=\"api/platform-browser/animations#animations\"><i class=\"material-icons\">link</i></a>animations</h1>\n    <label class=\"api-type-label module\">module</label>\n    \n    \n    \n    <span class=\"version\"></span>\n  </header>\n\n  \n\n\n<section class=\"export-list\">\n  <ul>\n    <li><a href=\"api/platform-browser/animations/BrowserAnimationsModule\">BrowserAnimationsModule</a></li><li><a href=\"api/platform-browser/animations/NoopAnimationsModule\">NoopAnimationsModule</a></li>\n  </ul>\n</section>\n\n</article>"
+}
