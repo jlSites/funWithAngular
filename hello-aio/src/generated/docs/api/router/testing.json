@@ -1,5 +1,0 @@
-{
-  "id": "api/router/testing",
-  "title": "testing",
-  "contents": "<article>\n  <header class=\"api-header\">\n    <h1 class=\"no-toc\" id=\"testing\"><a title=\"Link to this heading\" class=\"header-link\" aria-hidden=\"true\" href=\"api/router/testing#testing\"><i class=\"material-icons\">link</i></a>testing</h1>\n    <label class=\"api-type-label module\">module</label>\n    \n    \n    \n    <span class=\"version\"></span>\n  </header>\n\n  \n\n\n<section class=\"export-list\">\n  <ul>\n    <li><a href=\"api/router/testing/SpyNgModuleFactoryLoader\">SpyNgModuleFactoryLoader</a></li><li><a href=\"api/router/testing/setupTestingRouter\">setupTestingRouter</a></li><li><a href=\"api/router/testing/RouterTestingModule\">RouterTestingModule</a></li>\n  </ul>\n</section>\n\n</article>"
-}

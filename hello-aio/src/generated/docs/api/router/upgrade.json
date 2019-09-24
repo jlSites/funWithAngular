@@ -1,5 +1,0 @@
-{
-  "id": "api/router/upgrade",
-  "title": "upgrade",
-  "contents": "<article>\n  <header class=\"api-header\">\n    <h1 class=\"no-toc\" id=\"upgrade\"><a title=\"Link to this heading\" class=\"header-link\" aria-hidden=\"true\" href=\"api/router/upgrade#upgrade\"><i class=\"material-icons\">link</i></a>upgrade</h1>\n    <label class=\"api-type-label module\">module</label>\n    \n    \n    \n    <span class=\"version\"></span>\n  </header>\n\n  \n\n\n<section class=\"export-list\">\n  <ul>\n    <li><a href=\"api/router/upgrade/RouterUpgradeInitializer\">RouterUpgradeInitializer</a></li><li><a href=\"api/router/upgrade/locationSyncBootstrapListener\">locationSyncBootstrapListener</a></li><li><a href=\"api/router/upgrade/setUpLocationSync\">setUpLocationSync</a></li>\n  </ul>\n</section>\n\n</article>"
-}

@@ -35,3 +35,12 @@
 3) compare two projs
 
 4) `ng serve`
+
+# How to check your local dev environment?
+node -v
+npm -v
+
+# How to switch between git users?
+git config -l --global
+git config -l --local
+
